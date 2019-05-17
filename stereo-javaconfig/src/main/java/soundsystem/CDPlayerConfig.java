@@ -15,6 +15,13 @@ public class CDPlayerConfig {
     public CompactDisc compactDisc() {
         return new SgtPeppers();
     }
+
+    @Bean
+    @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+    public Plant forEliza(){
+        return new Flower();
+    }
+
 //
 //    @Bean
 //    public MediaPlayer cdPlayer() {
