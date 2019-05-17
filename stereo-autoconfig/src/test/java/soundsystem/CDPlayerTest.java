@@ -1,5 +1,6 @@
 package soundsystem;
 
+import not_scanned.Vehicle;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.StandardOutputStreamLog;
@@ -22,6 +23,36 @@ public class CDPlayerTest {
 
     @Autowired
     private CompactDisc cd;
+
+    @Autowired
+    private Animal myPet;
+
+    @Autowired
+    private Animal maybeDog;
+
+    @Autowired
+    private Vehicle car;
+
+    @Autowired
+    private Castle myCastle;
+
+
+    @Test
+    public void castleAndKnightTest(){
+        assertNotNull(myCastle);
+        assertNotNull(myCastle.getKnight());
+        assertNotNull(myCastle.getKnight().getSword());
+    }
+
+    @Test
+    public void carTest(){
+        assertNotNull(car);
+    }
+
+    @Test
+    public void isAnimalTheSame(){
+        System.out.println(myPet==maybeDog);
+    }
 
     @Test
     public void cdShouldNotBeNull() {
